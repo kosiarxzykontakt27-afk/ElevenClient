@@ -251,7 +251,7 @@ public final class Builtins {
         @Override public void onTick() {
             if (mc.world == null) return;
             long ticks = ((Math.round(val(0)) - 6 + 24) % 24) * 1000L;
-            mc.world.setTimeOfDay(ticks);
+            mc.world.setTime(mc.world.getTime(), ticks, false);
         }
     }
 
